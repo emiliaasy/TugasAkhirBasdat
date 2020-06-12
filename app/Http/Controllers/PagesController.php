@@ -2,17 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
-    /**
-     * Show the profile for the given user.
-     *
-     * @param  int  $id
-     * @return View
-     */
-
     public function dashboard()
     {
         return view('index');
@@ -22,7 +15,4 @@ class PagesController extends Controller
     {
         return view('about');
     }
-
-
-
 }

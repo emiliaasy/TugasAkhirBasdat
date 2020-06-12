@@ -21,5 +21,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('about');
 // });
 
+
+
 Route::get('/', 'PagesController@dashboard');
 Route::get('/about', 'PagesController@about');
+Route::get('/members', 'MembersController@index');
