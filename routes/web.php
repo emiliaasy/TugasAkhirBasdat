@@ -26,3 +26,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@dashboard');
 Route::get('/about', 'PagesController@about');
 Route::get('/members', 'MembersController@index');
+
+
+//items
+Route::get('/items', 'ItemsController@index');
+Route::get('/items/{item}', 'ItemsController@show');

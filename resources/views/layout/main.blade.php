@@ -22,6 +22,7 @@
                 <a class="nav-item nav-link active" href="{{ url('/') }}">Dashboard</a>
                 <a class="nav-item nav-link" href="{{ url('/about') }}">About</a>
                 <a class="nav-item nav-link" href="{{ url('/members') }}">Members</a>
+                <a class="nav-item nav-link" href="{{ url('/items') }}">Items</a>
             </div>
             </div>
         </div>

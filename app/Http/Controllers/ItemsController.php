@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class MembersController extends Controller
+class ItemsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index() //menampilkan semua data anggota
+    public function index()
     {
-        // $anggota = DB::table('members')->get();
-        $anggota = \App\Member::all();
-        return view('members.index', ['anggota' => $anggota]);
+        $items = Item::all();
+        return view('items.index', ['items' => $items]);
     }
 
     /**
@@ -43,21 +42,21 @@ class MembersController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function show($id) //menampilkan data anggota tertentu
+    public function show(Item $item)
     {
-        //
+        return view('items.show', compact('item'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Item $item)
     {
         //
     }
@@ -66,10 +65,10 @@ class MembersController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Item $item)
     {
         //
     }
@@ -77,10 +76,10 @@ class MembersController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Item  $item
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Item $item)
     {
         //
     }
