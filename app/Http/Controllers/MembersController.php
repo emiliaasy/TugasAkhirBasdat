@@ -14,7 +14,8 @@ class MembersController extends Controller
      */
     public function index() //menampilkan semua data anggota
     {
-        $anggota = DB::table('anggota')->get();
+        // $anggota = DB::table('members')->get();
+        $anggota = \App\Members::all();
         return view('members.index', ['anggota' => $anggota]);
     }
 
