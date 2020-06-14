@@ -76,7 +76,7 @@ class MembersController extends Controller
      */
     public function edit(Member $member)
     {
-        //
+        return view('members.edit', compact('member'));
     }
 
     /**
@@ -88,7 +88,22 @@ class MembersController extends Controller
      */
     public function update(Request $request, Member $member)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'alamat' => 'required',
+            'kontak' => 'required'
+        ]);
+        
+        Member::where('id', $member->id)
+            ->update([
+                'nama' => $request->nama,
+                'email' => $request->email,
+                'alamat' => $request->alamat,
+                'kontak' => $request->kontak,
+            ]);
+        return redirect('/members')->with('status', 'Data Berhasil Disimpan!');
+
     }
 
     /**

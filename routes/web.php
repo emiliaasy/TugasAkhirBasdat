@@ -32,4 +32,6 @@ Route::get('/members/create', 'MembersController@create');
 Route::get('/members/{member}', 'MembersController@show');
 Route::post('/members', 'MembersController@store');
 Route::delete('/members/{member}', 'MembersController@destroy');
+Route::get('/members/{member}/edit', 'MembersController@edit');
+Route::patch('/members/{member}', 'MembersController@update');
 
