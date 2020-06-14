@@ -15,7 +15,11 @@
                         <p class="card-text">{{ $member->alamat }}</p>
                         <p class="card-text">{{ $member->kontak }}</p>
                         <button type="submit" class="btn btn-primary">Edit</button>
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <form action="{{ $member->id }}" method="post" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
                         <a href="/items" class="card-link">Back</a>
                     </div>
                 </div>

@@ -12,28 +12,28 @@
                     @csrf
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Masukkan Nama" name="nama">
+                        <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Masukkan Nama" name="nama" value="{{ old('nama') }}">
                         @error('nama')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Masukkan Email" name="email">
+                        <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="Masukkan Email" name="email" value="{{ old('email') }}">
                         @error('email')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="alamat">Alamat</label>
-                        <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" placeholder="Masukkan Alamat" name="alamat">
+                        <input type="text" class="form-control @error('alamat') is-invalid @enderror" id="alamat" placeholder="Masukkan Alamat" name="alamat" value="{{ old('alamat') }}">
                         @error('alamat')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="kontak">Kontak</label>
-                        <input type="text" class="form-control @error('kontak') is-invalid @enderror" id="kontak" placeholder="Masukkan Kontak" name="kontak">
+                        <input type="text" class="form-control @error('kontak') is-invalid @enderror" id="kontak" placeholder="Masukkan Kontak" name="kontak" value="{{ old('kontak') }}">
                         @error('kontak')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror

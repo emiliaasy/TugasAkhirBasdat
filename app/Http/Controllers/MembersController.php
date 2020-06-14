@@ -99,6 +99,7 @@ class MembersController extends Controller
      */
     public function destroy(Member $member)
     {
-        //
+        Member::destroy($member->id);
+        return redirect('/members')->with('status', 'Data Berhasil Dihapus!');
     }
 }

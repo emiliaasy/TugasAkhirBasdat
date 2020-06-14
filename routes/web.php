@@ -31,4 +31,5 @@ Route::get('/members', 'MembersController@index');
 Route::get('/members/create', 'MembersController@create');
 Route::get('/members/{member}', 'MembersController@show');
 Route::post('/members', 'MembersController@store');
+Route::delete('/members/{member}', 'MembersController@destroy');
 
