@@ -13,9 +13,14 @@ class MembersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $members = Member::all();
+        if($request->has('cari')){
+            $members = Member::where('nama', 'LIKE', '%'.$request->cari.'%')->get();
+        }else(
+            $members = Member::all()
+        );
+        
         return view('members.index', ['members' => $members]);
     }
 
@@ -94,7 +99,7 @@ class MembersController extends Controller
             'alamat' => 'required',
             'kontak' => 'required'
         ]);
-        
+
         Member::where('id', $member->id)
             ->update([
                 'nama' => $request->nama,
