@@ -25,9 +25,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@dashboard');
 Route::get('/about', 'PagesController@about');
+
+//members
 Route::get('/members', 'MembersController@index');
+Route::get('/members/create', 'MembersController@create');
+Route::get('/members/{member}', 'MembersController@show');
+Route::post('/members', 'MembersController@store');
 
-
-//items
-Route::get('/items', 'ItemsController@index');
-Route::get('/items/{item}', 'ItemsController@show');

@@ -6,36 +6,22 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-10">
+            <div class="col-5">
                 <h1 class="mt=3">Daftar Anggota</h1>
-
-                <table class="table">
-                    <thead class="thead-dark">
-                        <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Nama</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Alamat</th>
-                        <th scope="col">Kontak</th>
-                        <th scope="col">Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($anggota as $agt)
-                        <tr>
-                            <th scope="row">{{ $loop->iteration }}</th>
-                            <td>{{ $agt->nama }}</td>
-                            <td>{{ $agt->email }}</td>
-                            <td>{{ $agt->alamat }}</td>
-                            <td>{{ $agt->kontak }}</td>
-                            <td>
-                                <a href="" class="badge badge-success">edit</a>
-                                <a href="" class="badge badge-danger">delete</a>
-                            </td>
-                        </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                <a href="/members/create" class="btn btn-primary my-3">Tambah Data Anggota</a>
+                @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+                @endif
+                <ul class="list-group">
+                    @foreach( $members as $member )
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ $member->nama }}
+                        <a href="/members/{{ $member->id }}" class="badge badge-info">detail</a>
+                    </li>
+                    @endforeach
+                </ul>
             </div>
         </div>
     </div>
