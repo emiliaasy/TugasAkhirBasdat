@@ -2,14 +2,38 @@
 
 @section('title', 'Daftar Anggota')
 
-@section('container')
-
-    <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <h1 class="mt=3">Daftar Anggota</h1>
-                <button type="button" class="btn btn-primary my-3" data-toggle="modal" data-target="#exampleModal">Tambah Data Anggota</button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+@section('content')
+<div class="main">
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                <div class="panel">
+								<div class="panel-heading">
+                                    <h3 class="panel-title">Daftar Anggota</h3>
+                                </div>
+                                <div class="panel-body">
+									<table class="table table-striped">
+										<tbody>
+                                            @foreach( $members as $member )
+                                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            {{ $member->nama }}
+                                            <a href="/members/{{ $member->id }}" class="badge badge-info">detail</a>
+                                            </li>
+                                            @endforeach
+										</tbody>
+									</table>
+                                </div>
+                                <div class="container">
+                                    <button type="button" class="btn btn-primary float-right my-3" data-toggle="modal" data-target="#exampleModal">Tambah Data Anggota</button>
+                                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                          <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -62,15 +86,9 @@
                 </div>
                 @endif
                 <ul class="list-group">
-                    @foreach( $members as $member )
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        {{ $member->nama }}
-                        <a href="/members/{{ $member->id }}" class="badge badge-info">detail</a>
-                    </li>
-                    @endforeach
+                    
                 </ul>
             </div>
         </div>
     </div>
-@endsection
-   
+@stop

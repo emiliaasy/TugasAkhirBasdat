@@ -2,12 +2,15 @@
 
 @section('title', 'Detail Anggota')
 
-@section('container')
-
-    <div class="container">
-        <div class="row">
-            <div class="col-5">
-                <h1 class="mt=3">Detail Anggota</h1>
+@section('content')
+<div class="main">
+    <div class="main-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="mt=3 d-inline">Detail Anggota</h1>				
+                    <div class="well">
+                                    
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">{{ $member->nama }}</h5>
@@ -23,6 +26,21 @@
                         <a href="/members" class="card-link">Back</a>
                     </div>
                 </div>
+								</div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@stop
+
+@section('container')
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                
             </div>
         </div>
     </div>
