@@ -23,8 +23,12 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', 'PagesController@dashboard');
-Route::get('/about', 'PagesController@about');
+Route::get('/', 'PagesController@dashboard')->middleware('auth');
+Route::get('/about', 'PagesController@about')->middleware('auth');
+
+Route::get('login', 'AuthController@login')->name('login');
+Route::post('postlogin', 'AuthController@postlogin');
+Route::get('logout', 'AuthController@logout');
 
 //members
 // Route::get('/members', 'MembersController@index');
@@ -35,4 +39,4 @@ Route::get('/about', 'PagesController@about');
 // Route::get('/members/{member}/edit', 'MembersController@edit');
 // Route::patch('/members/{member}', 'MembersController@update');
 
-Route::resource('members', 'MembersController');
+Route::resource('members', 'MembersController')->middleware('auth');

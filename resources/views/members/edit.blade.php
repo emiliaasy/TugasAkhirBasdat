@@ -44,7 +44,7 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <button type="button" class="btn btn-primary float-right my-3" data-toggle="modal" data-target="#exampleModal">Save Changes</button>
+                            <button type="button" class="btn btn-primary float-right my-3" action="/members">Save Changes</button>
                         </form>
 					</div>
 				</div>

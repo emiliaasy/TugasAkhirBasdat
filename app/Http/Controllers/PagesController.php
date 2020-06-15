@@ -15,4 +15,9 @@ class PagesController extends Controller
     {
         return view('about');
     }
+
+    public function members()
+    {
+        return view('members');
+    }
 }
