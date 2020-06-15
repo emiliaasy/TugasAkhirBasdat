@@ -29,8 +29,20 @@ class MembersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        
+        //insert ke tabel users
+        $user = new \App\User;
+        $user->role = 'member';
+        $user->name = $request->nama;
+        $user->email = $request->email;
+        $user->password = bcrypt('apayaaaa');
+        $user->remember_token;
+        $user->save();
+        //insert ke tabel members
+        $request->request->add([ 'user_id' => $user->id ]);
+        $member = Member::create($request->all());
         return view('members.create');
     }
 
@@ -58,7 +70,6 @@ class MembersController extends Controller
             'kontak' => 'required'
         ]);
 
-        Member::create($request->all());
         return redirect('/members')->with('status', 'Data Berhasil Ditambahkan!');
     }
 
@@ -107,6 +118,12 @@ class MembersController extends Controller
                 'alamat' => $request->alamat,
                 'kontak' => $request->kontak,
             ]);
+
+        if($request->hasfile('avatar')){
+            $request->file('avatar')->move('images/',$request->file('avatar')->getClientOriginalName());
+            $members->avatar = $request->file('avatar')->getClientOriginalName();
+            $members->save();
+        }
         return redirect('/members')->with('status', 'Data Berhasil Disimpan!');
 
     }

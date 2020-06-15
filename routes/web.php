@@ -39,4 +39,8 @@ Route::get('logout', 'AuthController@logout');
 // Route::get('/members/{member}/edit', 'MembersController@edit');
 // Route::patch('/members/{member}', 'MembersController@update');
 
-Route::resource('members', 'MembersController')->middleware('auth');
+Route::resource('members', 'MembersController')->middleware('auth', 'checkRole:admin');
+
+Route::group(['middleware' => ['auth', 'checkRole:admin,siswa']], function(){
+    Route::get('/','PagesController@dashboard');
+});
