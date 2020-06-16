@@ -7,8 +7,8 @@
 					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
 				</div>
 				<form class="navbar-form navbar-left">
-					<div class="input-group">
-						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
+					<div class="input-group" method="get" action="/members">
+						<input name="cari" type="text" value="" class="form-control" placeholder="Search dashboard...">
 						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
 					</div>
 				</form>

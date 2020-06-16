@@ -29,20 +29,8 @@ class MembersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(Request $request)
+    public function create()
     {
-        
-        //insert ke tabel users
-        $user = new \App\User;
-        $user->role = 'member';
-        $user->name = $request->nama;
-        $user->email = $request->email;
-        $user->password = bcrypt('apayaaaa');
-        $user->remember_token;
-        $user->save();
-        //insert ke tabel members
-        $request->request->add([ 'user_id' => $user->id ]);
-        $member = Member::create($request->all());
         return view('members.create');
     }
 
@@ -70,6 +58,18 @@ class MembersController extends Controller
             'kontak' => 'required'
         ]);
 
+        //insert ke tabel users
+        $user = new \App\User;
+        $user->role = 'member';
+        $user->name = $request->nama;
+        $user->email = $request->email;
+        $user->password = bcrypt('apayaaaa');
+        $user->remember_token;
+        $user->save();
+
+        //insert ke tabel members
+        $request->request->add([ 'user_id' => $user->id ]);
+        $member = Member::create($request->all());
         return redirect('/members')->with('status', 'Data Berhasil Ditambahkan!');
     }
 
@@ -111,18 +111,22 @@ class MembersController extends Controller
             'kontak' => 'required'
         ]);
 
+        // dd($request->all());
+        
         Member::where('id', $member->id)
             ->update([
                 'nama' => $request->nama,
                 'email' => $request->email,
                 'alamat' => $request->alamat,
                 'kontak' => $request->kontak,
+                'avatar' => $request->avatar,
             ]);
+        
 
-        if($request->hasfile('avatar')){
+        if($request->hasFile('avatar')){
             $request->file('avatar')->move('images/',$request->file('avatar')->getClientOriginalName());
-            $members->avatar = $request->file('avatar')->getClientOriginalName();
-            $members->save();
+            $member->avatar = $request->file('avatar')->getClientOriginalName();
+            $member->save();
         }
         return redirect('/members')->with('status', 'Data Berhasil Disimpan!');
 
@@ -139,4 +143,5 @@ class MembersController extends Controller
         Member::destroy($member->id);
         return redirect('/members')->with('status', 'Data Berhasil Dihapus!');
     }
+    
 }

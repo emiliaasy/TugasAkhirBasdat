@@ -25,6 +25,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'PagesController@dashboard')->middleware('auth');
 Route::get('/about', 'PagesController@about')->middleware('auth');
+Route::get('/bookshelf', 'BookController@bookshelf')->middleware('auth');
+Route::get('/cart', 'CartController@cart')->middleware('auth');
 
 Route::get('login', 'AuthController@login')->name('login');
 Route::post('postlogin', 'AuthController@postlogin');

@@ -15,7 +15,7 @@
 								<div class="profile-header">
 									<div class="overlay"></div>
 									<div class="profile-main">
-										<img src="{{ asset('img/'.$member->avatar) }}" class="img-circle" alt="Avatar">
+										<img src="{{ asset('images/'.$member->avatar) }}" width="90px" height="90px" class="img-circle" alt="Avatar">
 										<h3 class="name">{{ $member->nama }}</h3>
 										<span class="online-status status-available">Available</span>
 									</div>
@@ -76,19 +76,13 @@
 									<div class="row">
 										<div class="col-md-3 col-sm-6">
 											<div class="award-item">
-												<div class="hexagon">
-													<span class="lnr lnr-sun award-icon"></span>
-												</div>
-												<span>Most Bright Idea</span>
+												<a href="/members"><img src="/images/selena_gramedia.jpg" width="120px" height="120px" class="btn btn-img-square" alt="awards"></img></a>
 											</div>
 										</div>
 										<div class="col-md-3 col-sm-6">
 											<div class="award-item">
-												<div class="hexagon">
-													<span class="lnr lnr-clock award-icon"></span>
-												</div>
-												<span>Most On-Time</span>
-											</div>
+											<a href="/members"><img src="/images/selena_gramedia.jpg" width="120px" height="120px" class="btn btn-img-square" alt="awards"></img></a>
+										</div>
 										</div>
 										<div class="col-md-3 col-sm-6">
 											<div class="award-item">

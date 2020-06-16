@@ -13,7 +13,7 @@
                         <h3 class="panel-title">Edit Data</h3>
                     </div>
                     <div class="panel-body">
-						<form method="post" action="/members/{{ $member->id }}">
+						<form method="post" action="/members/{{ $member->id }}" enctype="multipart/form-data">
                         @method('patch')
                         @csrf
                             <div class="form-group">
