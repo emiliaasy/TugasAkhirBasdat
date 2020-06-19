@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="{{asset('admin/assets/img/logo-dark.png')}}" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.html"><img src="{{asset('admin/assets/img/logo-lagi.png')}}" alt="Klorofil Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -8,7 +8,7 @@
 				</div>
 				<form class="navbar-form navbar-left">
 					<div class="input-group" method="get" action="/members">
-						<input name="cari" type="text" value="" class="form-control" placeholder="Search dashboard...">
+						<input name="cari" type="text" value="" class="form-control" placeholder="Search members...">
 						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
 					</div>
 				</form>

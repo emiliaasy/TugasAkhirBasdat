@@ -37,6 +37,7 @@
 								<!-- PROFILE DETAIL -->
 								<div class="profile-detail">
 									<div class="profile-info">
+                                    	<button type="button" class="heading" data-toggle="modal" data-target="#exampleModal">Change My Ava</button>
 										<h4 class="heading">Basic Info</h4>
 										<ul class="list-unstyled list-justify">
 											<li>Email <span>{{ $member->email }}</span></li>
@@ -141,6 +142,32 @@
 			</div>
 			<!-- END MAIN CONTENT -->
 		</div>
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Change My Avatar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="/members/{{ $member->id }}">
+				@method('patch')
+					 @csrf
+					 <div class="form-group">
+                        <label for="avatar">Avatar</label>
+                        <input type="file" class="form-control" id="avatar" placeholder="Tambahkan Foto Profil" name="avatar" value="{{ $member->avatar }}">
+                    </div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+						<button type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+                   
+            </div>
+        </div>
+    </div>
+</div>
 @stop
 
 @section('container')
@@ -157,12 +184,13 @@
                         <h6 class="card-subtitle mb-2 text-muted">{{ $member->email }}</h6>
                         <p class="card-text">{{ $member->alamat }}</p>
                         <p class="card-text">{{ $member->kontak }}</p>
-                        <a href="{{ $member->id }}/edit" class="btn btn-primary">Edit</a>
-                        
-                    </div>
+                        <a href="{{ $member->id }}/edit" class="btn btn-primary">Edit</a>                        
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
 @endsection
    
