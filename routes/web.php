@@ -23,7 +23,6 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/', 'PagesController@dashboard')->middleware('auth');
 Route::get('/about', 'PagesController@about')->middleware('auth');
 
 Route::get('login', 'AuthController@login')->name('login');
@@ -47,5 +46,8 @@ Route::group(['middleware' => ['auth', 'checkRole:admin,siswa']], function(){
 
 Route::get('/bookshelf', 'BooksController@index');
 Route::get('/bookshelf/{book}', 'BooksController@show');
+
+Route::get('/cart', 'CartsController@index');
+Route::get('/cart/{cart}', 'CartsController@show');
 
 });

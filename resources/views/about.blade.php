@@ -12,25 +12,15 @@
 					<h3 class="page-title">Tentang</h3>
 					<div class="panel panel-headline">
 						<div class="panel-body">
-							<h1>Dashboard Heading 1</h1>
+							<h1>SELAMAT DATANG!</h1>
 							<hr>
-							<p>Appropriately benchmark web-enabled bandwidth and functionalized leadership skills. Conveniently syndicate global opportunities without interactive methods of empowerment. Collaboratively conceptualize user-centric e-tailers for visionary methodologies. Dramatically myocardinate. Phosfluorescently disintermediate unique resources whereas reliable mindshare. Competently optimize client-focused infrastructures vis-a-vis e-business human capital. Uniquely formulate sustainable benefits whereas functional results. Energistically myocardinate bleeding-edge e-business.</p>
+							<p>Menurut UNESCO, Indonesia memiliki minat baca sebesar 0.001%, yang artinya di antara 1000 orang, hanya ada 1 orang yang rajin membaca buku (sumber:Kominfo.go.id). Minat baca masyarakat Indonesia yang rendah dapat mempengaruhi kualitas pendidikan Indonesia, yang pada akhirnya berdampak pada kualitas sumber daya manusia Indonesia. Minat baca masyarakat Indonesia harus ditingkatkan agar dapat membangun struktur sumber daya manusia yang kokoh, tidak mudah goyah saat terbawa arus kemajuan teknologi. </p>
+							<p>Buku menyediakan wawasan yang luas bagi para pembacanya sehingga memungkinkan pembaca memandang suatu persoalan dari berbagai sisi dan dapat menyelesaikan masalah yang ada di sekitarnya.  </p>
+							<p>RUANG BACA hadir sebagai ruang bagi masyarkat Indonesia untuk meningkatkan literasi melalui buku-buku yang telah disediakan secara digital. </p>
 							<hr>
-							<p class="text-muted"><code>.text-muted</code> Convey meaning through color with a handful of emphasis utility classes.</p>
-							<p class="text-primary"><code>.text-primary</code> Convey meaning through color with a handful of emphasis utility classes.</p>
-							<p class="text-success"><code>.text-success</code> Convey meaning through color with a handful of emphasis utility classes.</p>
-							<p class="text-info"><code>.text-info</code> Convey meaning through color with a handful of emphasis utility classes.</p>
-							<p class="text-warning"><code>.text-warning</code> Convey meaning through color with a handful of emphasis utility classes.</p>
-							<p class="text-danger"><code>.text-danger</code> Convey meaning through color with a handful of emphasis utility classes.</p>
+							<p>RUANG BACA merupakan aplikasi digital yang menyediakan penjualan buku secara online dengan berbagai kategori buku.</p>
+							<p>RUANG BACA memudahkan penggemar buku untuk bisa menginvestasikan buku bacaan di perangkat pribadi.</p>
 							<hr>
-							<p>Make a paragraph stand out by adding <code>.lead</code></p>
-							<p class="lead">Objectively re-engineer maintainable total linkage after proactive intellectual capital. Dynamically evolve best-of-breed e-services for user-centric customer.</p>
-							<hr>
-							<div class="well">
-								<p class="text-left"><code>.text-left</code> Left aligned text.</p>
-								<p class="text-center"><code>.text-center</code> Center aligned text.</p>
-								<p class="text-right"><code>.text-right</code> Right aligned text.</p>
-							</div>
 						</div>
 					</div>
 				</div>

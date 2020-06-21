@@ -79,8 +79,9 @@ class MembersController extends Controller
      * @param  \App\Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function show(Member $member)
+    public function show(Request $request, Member $member)
     {
+       
         return view('members.show', compact('member'));
     }
 
@@ -108,7 +109,7 @@ class MembersController extends Controller
             'nama' => 'required',
             'email' => 'required',
             'alamat' => 'required',
-            'kontak' => 'required'
+            'kontak' => 'required',
         ]);
 
         // dd($request->all());
@@ -123,11 +124,11 @@ class MembersController extends Controller
             ]);
         
 
-        if($request->hasFile('avatar')){
-            $request->file('avatar')->move('images/',$request->file('avatar')->getClientOriginalName());
-            $member->avatar = $request->file('avatar')->getClientOriginalName();
-            $member->save();
-        }
+            if($request->hasFile('avatar')){
+                $request->file('avatar')->move('images/',$request->file('avatar')->getClientOriginalName());
+                $member->avatar = $request->file('avatar')->getClientOriginalName();
+                $member->save();
+            }
         return redirect('/members')->with('status', 'Data Berhasil Disimpan!');
 
     }

@@ -16,14 +16,15 @@ class CreateBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('judul');
-            $table->string('kode')->unique();
+            $table->string('kode');
+            $table->string('kategori');
             $table->string('harga');
-            $table->char('tahun terbit');
+            $table->string('tahun terbit');
             $table->char('penulis');
             $table->char('penerbit');
-            $table->char('stock');
             $table->timestamps();
         });
+
     }
 
     /**

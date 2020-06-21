@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Book;
+use App\Cart;
 use Illuminate\Http\Request;
 
-class BooksController extends Controller
+class CartsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class BooksController extends Controller
      */
     public function index()
     {
-        $books = Book::all();
-        return view('books.index', compact('books'));
+        $carts = Cart::all();
+        return view('carts.index', compact('carts'));
     }
 
     /**
@@ -42,21 +42,21 @@ class BooksController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Book  $book
+     * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function show(Book $book)
+    public function show(Cart $cart)
     {
-        return view('books.show', compact('book'));
+        return view('carts.show', compact($cart));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Book  $book
+     * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function edit(Book $book)
+    public function edit(Cart $cart)
     {
         //
     }
@@ -65,10 +65,10 @@ class BooksController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Book  $book
+     * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
+    public function update(Request $request, Cart $cart)
     {
         //
     }
@@ -76,10 +76,10 @@ class BooksController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Book  $book
+     * @param  \App\Cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
+    public function destroy(Cart $cart)
     {
         //
     }

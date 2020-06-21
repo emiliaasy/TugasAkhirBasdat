@@ -44,6 +44,10 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="avatar">Avatar</label>
+                                <input type="file" class="form-control" id="avatar" placeholder="Tambahkan Foto Profil" name="avatar" value="{{ $member->avatar }}">
+                            </div>
                             <button type="submit" class="btn btn-primary float-right my-3" action="/members">Save Changes</button>
                         </form>
 					</div>
