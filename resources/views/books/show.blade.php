@@ -11,11 +11,6 @@
                 <div class="panel">
 					<div class="panel-heading">
 						<h3 class="panel-title">Rincian Produk</h3>
-						@if (session('status'))
-                        <div class="label label-success btn-toastr" data-position="bottom-center">
-                        {{ session('status') }}
-                        </div>
-                        @endif
 					</div>
 					<div class="panel-body">
                         <div class="custom-tabs-line tabs-line-bottom left-aligned">
@@ -54,7 +49,7 @@
 												<tbody>
 													<tr>
 														<td>Judul</td>
-														<td>The Critical Thinking Toolkit</td>
+														<td>The Critical Thinking Tool Kit</td>
 													</tr>
 													<tr>
 														<td>ISBN</td>
@@ -78,7 +73,7 @@
 													</tr>
 													<tr>
 														<td>Harga</td>
-														<td>Rp 30.000,00</td>
+														<td>Rp 80.000,00</td>
 													</tr>
 													<tr>
 														<td>Tebal</td>

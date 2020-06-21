@@ -26,18 +26,12 @@
                           <tbody>
                             <tr>
                               <th scope="row">1</th>
-                              <td>Selena</th>
-                              <td>1</td>
-                              <td>Rp 80000,00</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <td>Nebula</th>
+                              <td>The Critical Thinking Tool Kit</th>
                               <td>1</td>
                               <td>Rp 80000,00</td>
                             </tr>
                             <th scope="col">Total</th>
-                            <td>Rp 160000,00</td>
+                            <td>Rp 80.000,00</td>
 										      </tbody>
                         </tbody>
 									    </table>
@@ -64,18 +58,19 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form method="post" action="/bookshelf">
+                <form method="get" action="/about">
                      @csrf
                     <div class="form-group">
-						<label for="select">Metode Pembayaran</label>
-						<select id="select">
-        					<option value="">Pilih Bank</option>
-          							<option value="">BNI</option>
-          							<option value="">BCA</option>
-          							<option value="">BRI</option>
-          							<option value="">Mandiri</option>
-        					</optgroup>
-      					</select>
+						          <label for="select">Metode Pembayaran</label>
+                      <p>Harap melakukan transfer ke rekening berikut</p>
+                      <p>072836253928323372 (BNI)</p>
+                      <p> a.n. manusia
+                      <div class="form-group">
+                        <label for="transfer">Upload Bukti Pembayaran</label>
+                        <input type="file" class="form-control" id="transfer" placeholder="Upload bukti pembayaran name="transfer">
+                      </div>
+                      <p>Buku digital akan dikirimkan melalui e-mail sesaat setelah mengirimkan bukti pembayaran.</p>
+                      <p class="head">Terima kasih!</p>
                     </div>
 
                     <div class="modal-center">
@@ -88,5 +83,4 @@
         </div>
     </div>
 </div>
-       
 @stop

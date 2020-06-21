@@ -48,6 +48,5 @@ Route::get('/bookshelf', 'BooksController@index');
 Route::get('/bookshelf/{book}', 'BooksController@show');
 
 Route::get('/cart', 'CartsController@index');
-Route::get('/cart/{cart}', 'CartsController@show');
 
 });

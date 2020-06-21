@@ -1,6 +1,6 @@
 @extends('layout/main')
 
-@section('title', 'Daftar Anggota')
+@section('title', 'Buku yang Tersedia')
 
 @section('content')
 <div class="main">
